@@ -1,0 +1,77 @@
+/* About, contact, newsletter */
+
+.about-grid img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+.prose {
+  padding: clamp(4px, 2vw, 22px);
+}
+
+.prose p {
+  font-size: 17px;
+}
+
+.value-card {
+  border-top: 4px solid var(--lotus-red);
+}
+
+.value-card:nth-child(2) {
+  border-top-color: var(--brand);
+}
+
+.value-card:nth-child(3) {
+  border-top-color: var(--gold);
+}
+
+.contact-info {
+  padding: 24px;
+  background-color: var(--lotus-red);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-info h4,
+.contact-info p,
+.contact-info .info-meta {
+  color: white;
+}
+
+.contact-info .info-block {
+  border-bottom-color: rgba(255, 255, 255, 0.22);
+}
+
+.contact-info .info-block:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.contact-form {
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.form-group label {
+  color: var(--ink);
+}
+
+.newsletter {
+  overflow: hidden;
+  max-width: 1160px;
+  background: linear-gradient(135deg, var(--ink) 0%, var(--lotus-deep) 52%, var(--lotus-red) 100%);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+.newsletter p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.newsletter form {
+  margin-top: 22px;
+}
+
+.newsletter input {
+  min-height: 48px;
+}
+

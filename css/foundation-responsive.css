@@ -1,0 +1,167 @@
+/* ===== Small Screen CSS ===== */
+
+@media (max-width: 900px) {
+  .hero,
+  .about-grid,
+  .contact-layout,
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categories,
+  .values-grid,
+  .testimonials,
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .cart-summary {
+    position: static;
+  }
+
+  .payment-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-inner,
+  .nav-links,
+  .nav-actions,
+  .hero-meta,
+  .newsletter form,
+  .product-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+  }
+
+  .hero-img img {
+    height: 320px;
+  }
+
+  .mySlides img {
+    height: 330px;
+  }
+
+  .text {
+    left: 15px;
+    bottom: 15px;
+    padding: 16px;
+    max-width: calc(100% - 30px);
+  }
+
+  .text h3 {
+    font-size: 24px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-steps {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .checkout-steps li::after {
+    width: 24px;
+  }
+
+  .cart-panel,
+  .checkout-section,
+  .cart-summary {
+    padding: 18px;
+  }
+
+  .cart-panel-head,
+  .checkout-section-head {
+    flex-direction: column;
+  }
+
+  .checkout-grid,
+  .payment-options,
+  .confirmation-next,
+  .product-detail-grid,
+  .product-detail-facts,
+  .modal-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail-media img {
+    min-height: 0;
+    height: 280px;
+  }
+
+  .product-detail-info {
+    padding: 24px 18px 18px;
+  }
+
+  .product-detail-info h2 {
+    font-size: 28px;
+  }
+
+  .checkout-field-wide {
+    grid-column: auto;
+  }
+
+  .cart-item {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .cart-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cart-item-price {
+    grid-column: 2;
+  }
+
+  .receipt-head {
+    flex-direction: column;
+  }
+
+  .receipt-total {
+    text-align: left;
+  }
+
+  .receipt-details {
+    grid-template-columns: 1fr;
+  }
+
+  .receipt-item {
+    grid-template-columns: 56px 1fr;
+    align-items: flex-start;
+  }
+
+  .receipt-item img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .receipt-line-total {
+    grid-column: 2;
+  }
+
+  .modal-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+

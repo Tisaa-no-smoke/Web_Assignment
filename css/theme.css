@@ -1,0 +1,77 @@
+/* ===== Bootstrap UI Upgrade ===== */
+
+:root {
+  --ink: #2b211c;
+  --ink-soft: #5b4636;
+  --muted: #806f62;
+  --page: #f4eadb;
+  --surface: #fffaf2;
+  --surface-strong: #fffdf8;
+  --line: #dcc6aa;
+  --brand: #a7472d;
+  --brand-dark: #6b2d22;
+  --hover-orange: #c86b2d;
+  --lotus-red: #7e2f28;
+  --lotus-soft: #f3ded2;
+  --lotus-deep: #4f1f1d;
+  --gold: #b7892f;
+  --shadow-sm: 0 10px 24px rgba(43, 33, 28, 0.08);
+  --shadow-md: 0 18px 45px rgba(43, 33, 28, 0.14);
+  --radius: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background:
+    linear-gradient(180deg, rgba(243, 222, 210, 0.72) 0, rgba(244, 234, 219, 0.2) 360px),
+    radial-gradient(circle at 16px 16px, rgba(167, 71, 45, 0.06) 0 2px, transparent 2.5px),
+    repeating-linear-gradient(45deg, transparent 0 22px, rgba(107, 45, 34, 0.045) 22px 23px, transparent 23px 44px),
+    repeating-linear-gradient(-45deg, transparent 0 22px, rgba(126, 47, 40, 0.04) 22px 23px, transparent 23px 44px),
+    var(--page);
+  background-size: auto, 32px 32px, 88px 88px, 88px 88px, auto;
+  color: var(--ink);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+p {
+  color: var(--ink-soft);
+}
+
+a {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+img {
+  border-style: none;
+}
+
+/* Bootstrap shares a few class names with this project. Keep the custom widgets stable. */
+.mySlides.fade {
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  display: block;
+  height: auto;
+  overflow: visible;
+  outline: 0;
+}
+
+.toast {
+  opacity: 1;
+}
+

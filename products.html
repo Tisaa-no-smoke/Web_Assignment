@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products — Kingdom Homecraft</title>
+  <meta name="description" content="Browse rattan, teak, krama silk, ceramics, plants, and decor from Cambodian artisans." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Noto+Serif+Khmer:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
+      <div class="container-xl nav-inner">
+        <a href="index.html" class="navbar-brand logo">Kingdom<span> Homecraft</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-lg-auto nav-links">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link active" aria-current="page">Products</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="nav-actions ms-lg-auto">
+            <a href="receipts.html" class="receipt-link"><i class="bi bi-receipt-cutoff" aria-hidden="true"></i><span>Receipts</span></a>
+            <a href="cart.html" class="cart-icon" aria-label="Cart"><i class="bi bi-bag" aria-hidden="true"></i><span>Cart</span><span class="cart-badge">0</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section">
+    <div class="section-header">
+      <span class="eyebrow">ផលិតផល · The Collection</span>
+      <h2>All Products</h2>
+      <p>Made by Khmer artisans across the Kingdom · Prices in USD & ៛</p>
+    </div>
+
+    <div class="toolbar">
+      <div id="filters" class="filters">
+        <button class="filter-btn active" data-category="All">All</button>
+        <button class="filter-btn" data-category="Furniture">Furniture</button>
+        <button class="filter-btn" data-category="Wall Decoration">Wall Decoration</button>
+        <button class="filter-btn" data-category="Lighting">Lighting</button>
+        <button class="filter-btn" data-category="Plants">Plants</button>
+        <button class="filter-btn" data-category="Home Accessories">Home Accessories</button>
+      </div>
+      <input id="search" class="search-input" type="search" placeholder="Search products..." />
+    </div>
+
+    <div id="products-grid" class="product-grid">
+      <article class="product-card reveal" data-id="1" data-name="Rattan Lounge Chair" data-category="Furniture" data-price="189" data-img="product-photos/01-rattan-lounge-chair.jpg">
+        <div class="product-img">
+          <img src="product-photos/01-rattan-lounge-chair.jpg" alt="Rattan Lounge Chair" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Furniture</span>
+          <h3 class="product-name">Rattan Lounge Chair</h3>
+          <p class="product-desc">Hand-woven rattan from Kampong Cham artisans.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$189</span>
+              <span class="product-price-khr">៛774,900</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="2" data-name="Teak Coffee Table" data-category="Furniture" data-price="245" data-img="product-photos/02-teak-coffee-table.jpg">
+        <div class="product-img">
+          <img src="product-photos/02-teak-coffee-table.jpg" alt="Teak Coffee Table" loading="lazy">
+          <span class="product-badge badge-bestseller">Bestseller</span>
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Furniture</span>
+          <h3 class="product-name">Teak Coffee Table</h3>
+          <p class="product-desc">Reclaimed Cambodian teak, hand-finished.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$245</span>
+              <span class="product-price-khr">៛1,004,500</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="3" data-name="Krama Linen Sofa" data-category="Furniture" data-price="690" data-img="product-photos/03-krama-linen-sofa.jpg">
+        <div class="product-img">
+          <img src="product-photos/03-krama-linen-sofa.jpg" alt="Krama Linen Sofa" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Furniture</span>
+          <h3 class="product-name">Krama Linen Sofa</h3>
+          <p class="product-desc">Three-seater dressed in traditional krama cotton.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$690</span>
+              <span class="product-price-khr">៛2,829,000</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="4" data-name="Apsara Wall Canvas" data-category="Wall Decoration" data-price="65" data-img="product-photos/04-apsara-wall-canvas.jpg">
+        <div class="product-img">
+          <img src="product-photos/04-apsara-wall-canvas.jpg" alt="Apsara Wall Canvas" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Wall Decoration</span>
+          <h3 class="product-name">Apsara Wall Canvas</h3>
+          <p class="product-desc">Hand-painted apsara-inspired lotus motif, 60x80 cm.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$65</span>
+              <span class="product-price-khr">៛266,500</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="5" data-name="Brass Temple Mirror" data-category="Wall Decoration" data-price="95" data-img="product-photos/05-brass-temple-mirror.jpg">
+        <div class="product-img">
+          <img src="product-photos/05-brass-temple-mirror.jpg" alt="Brass Temple Mirror" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Wall Decoration</span>
+          <h3 class="product-name">Brass Temple Mirror</h3>
+          <p class="product-desc">Angkor-inspired brass frame, 70 cm diameter.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$95</span>
+              <span class="product-price-khr">៛389,500</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="6" data-name="Silk Wall Weaving" data-category="Wall Decoration" data-price="55" data-img="product-photos/06-silk-wall-weaving.jpg">
+        <div class="product-img">
+          <img src="product-photos/06-silk-wall-weaving.jpg" alt="Silk Wall Weaving" loading="lazy">
+          <span class="product-badge badge-new">New</span>
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Wall Decoration</span>
+          <h3 class="product-name">Silk Wall Weaving</h3>
+          <p class="product-desc">Takeo silk, naturally dyed, handwoven.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$55</span>
+              <span class="product-price-khr">៛225,500</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="7" data-name="Rattan Pendant Lamp" data-category="Lighting" data-price="79" data-img="product-photos/07-rattan-pendant-lamp.jpg">
+        <div class="product-img">
+          <img src="product-photos/07-rattan-pendant-lamp.jpg" alt="Rattan Pendant Lamp" loading="lazy">
+          <span class="product-badge badge-new">New</span>
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Lighting</span>
+          <h3 class="product-name">Rattan Pendant Lamp</h3>
+          <p class="product-desc">Woven dome shade, warm Phnom Penh evenings.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$79</span>
+              <span class="product-price-khr">៛323,900</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="8" data-name="Brass Floor Lamp" data-category="Lighting" data-price="165" data-img="product-photos/08-brass-floor-lamp.jpg">
+        <div class="product-img">
+          <img src="product-photos/08-brass-floor-lamp.jpg" alt="Brass Floor Lamp" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Lighting</span>
+          <h3 class="product-name">Brass Floor Lamp</h3>
+          <p class="product-desc">Adjustable arc, marble base from Pursat.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$165</span>
+              <span class="product-price-khr">៛676,500</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="9" data-name="Kampong Chhnang Lamp" data-category="Lighting" data-price="72" data-img="product-photos/09-kampong-chhnang-lamp.jpg">
+        <div class="product-img">
+          <img src="product-photos/09-kampong-chhnang-lamp.jpg" alt="Kampong Chhnang Lamp" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Lighting</span>
+          <h3 class="product-name">Kampong Chhnang Lamp</h3>
+          <p class="product-desc">Hand-thrown ceramic base, linen shade.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$72</span>
+              <span class="product-price-khr">៛295,200</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="10" data-name="Frangipani Plant" data-category="Plants" data-price="28" data-img="product-photos/10-frangipani-plant.jpg">
+        <div class="product-img">
+          <img src="product-photos/10-frangipani-plant.jpg" alt="Frangipani Plant" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Plants</span>
+          <h3 class="product-name">Frangipani Plant</h3>
+          <p class="product-desc">Cambodia's national flower, ceramic pot.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$28</span>
+              <span class="product-price-khr">៛114,800</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="11" data-name="Bamboo Palm" data-category="Plants" data-price="22" data-img="product-photos/11-bamboo-palm.jpg">
+        <div class="product-img">
+          <img src="product-photos/11-bamboo-palm.jpg" alt="Bamboo Palm" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Plants</span>
+          <h3 class="product-name">Bamboo Palm</h3>
+          <p class="product-desc">Low-maintenance tropical, terracotta planter.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$22</span>
+              <span class="product-price-khr">៛90,200</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="12" data-name="Sugar Palm Sapling" data-category="Plants" data-price="45" data-img="product-photos/12-sugar-palm-sapling.jpg">
+        <div class="product-img">
+          <img src="product-photos/12-sugar-palm-sapling.jpg" alt="Sugar Palm Sapling" loading="lazy">
+          <span class="product-badge badge-bestseller">Bestseller</span>
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Plants</span>
+          <h3 class="product-name">Sugar Palm Sapling</h3>
+          <p class="product-desc">Cambodia's iconic tree, indoor variety.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$45</span>
+              <span class="product-price-khr">៛184,500</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="13" data-name="Krama Throw Blanket" data-category="Home Accessories" data-price="24" data-img="product-photos/13-krama-throw-blanket.jpg">
+        <div class="product-img">
+          <img src="product-photos/13-krama-throw-blanket.jpg" alt="Krama Throw Blanket" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Home Accessories</span>
+          <h3 class="product-name">Krama Throw Blanket</h3>
+          <p class="product-desc">Classic checkered krama, soft cotton weave.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$24</span>
+              <span class="product-price-khr">៛98,400</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="14" data-name="Kampong Chhnang Vase Set" data-category="Home Accessories" data-price="38" data-img="product-photos/14-kampong-chhnang-vase-set.jpg">
+        <div class="product-img">
+          <img src="product-photos/14-kampong-chhnang-vase-set.jpg" alt="Kampong Chhnang Vase Set" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Home Accessories</span>
+          <h3 class="product-name">Kampong Chhnang Vase Set</h3>
+          <p class="product-desc">Three matte terracotta vases, village-fired.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$38</span>
+              <span class="product-price-khr">៛155,800</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="15" data-name="Kampot Pepper Candle" data-category="Home Accessories" data-price="18" data-img="product-photos/15-kampot-pepper-candle.jpg">
+        <div class="product-img">
+          <img src="product-photos/15-kampot-pepper-candle.jpg" alt="Kampot Pepper Candle" loading="lazy">
+          <span class="product-badge badge-new">New</span>
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Home Accessories</span>
+          <h3 class="product-name">Kampot Pepper Candle</h3>
+          <p class="product-desc">Black pepper and lemongrass, 40-hour burn.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$18</span>
+              <span class="product-price-khr">៛73,800</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="16" data-name="Water Hyacinth Rug" data-category="Home Accessories" data-price="89" data-img="product-photos/16-water-hyacinth-rug.jpg">
+        <div class="product-img">
+          <img src="product-photos/16-water-hyacinth-rug.jpg" alt="Water Hyacinth Rug" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Home Accessories</span>
+          <h3 class="product-name">Water Hyacinth Rug</h3>
+          <p class="product-desc">Tonle Sap fiber, hand-braided, 160x230 cm.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$89</span>
+              <span class="product-price-khr">៛364,900</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="17" data-name="Rattan Dining Chair" data-category="Furniture" data-price="135" data-img="product-photos/17-rattan-dining-chair.jpg">
+        <div class="product-img">
+          <img src="product-photos/17-rattan-dining-chair.jpg" alt="Rattan Dining Chair" loading="lazy">
+          <span class="product-badge badge-new">New</span>
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Furniture</span>
+          <h3 class="product-name">Rattan Dining Chair</h3>
+          <p class="product-desc">Lightweight woven chair for dining rooms and quiet corners.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$135</span>
+              <span class="product-price-khr">៛553,500</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="18" data-name="Teak Bedside Table" data-category="Furniture" data-price="128" data-img="product-photos/18-teak-bedside-table.jpg">
+        <div class="product-img">
+          <img src="product-photos/18-teak-bedside-table.jpg" alt="Teak Bedside Table" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Furniture</span>
+          <h3 class="product-name">Teak Bedside Table</h3>
+          <p class="product-desc">Compact reclaimed teak table with a hand-rubbed finish.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$128</span>
+              <span class="product-price-khr">៛524,800</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="19" data-name="Angkor Relief Print" data-category="Wall Decoration" data-price="58" data-img="product-photos/19-angkor-relief-print.jpg">
+        <div class="product-img">
+          <img src="product-photos/19-angkor-relief-print.jpg" alt="Angkor Relief Print" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Wall Decoration</span>
+          <h3 class="product-name">Angkor Relief Print</h3>
+          <p class="product-desc">Temple-inspired artwork printed on textured cotton paper.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$58</span>
+              <span class="product-price-khr">៛237,800</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="20" data-name="Palm Leaf Wall Fan" data-category="Wall Decoration" data-price="42" data-img="product-photos/20-palm-leaf-wall-fan.jpg">
+        <div class="product-img">
+          <img src="product-photos/20-palm-leaf-wall-fan.jpg" alt="Palm Leaf Wall Fan" loading="lazy">
+          <span class="product-badge badge-new">New</span>
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Wall Decoration</span>
+          <h3 class="product-name">Palm Leaf Wall Fan</h3>
+          <p class="product-desc">Decorative woven fan for warm, natural wall texture.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$42</span>
+              <span class="product-price-khr">៛172,200</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="21" data-name="Terracotta Table Lamp" data-category="Lighting" data-price="84" data-img="product-photos/21-terracotta-table-lamp.jpg">
+        <div class="product-img">
+          <img src="product-photos/21-terracotta-table-lamp.jpg" alt="Terracotta Table Lamp" loading="lazy">
+          <span class="product-badge badge-bestseller">Bestseller</span>
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Lighting</span>
+          <h3 class="product-name">Terracotta Table Lamp</h3>
+          <p class="product-desc">Soft linen shade with a hand-thrown ceramic base.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$84</span>
+              <span class="product-price-khr">៛344,400</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="22" data-name="Areca Palm Basket Planter" data-category="Plants" data-price="34" data-img="product-photos/22-areca-palm-basket-planter.jpg">
+        <div class="product-img">
+          <img src="product-photos/22-areca-palm-basket-planter.jpg" alt="Areca Palm Basket Planter" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Plants</span>
+          <h3 class="product-name">Areca Palm Basket Planter</h3>
+          <p class="product-desc">Bright indoor palm paired with a woven basket cover.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$34</span>
+              <span class="product-price-khr">៛139,400</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="23" data-name="Krama Cushion Set" data-category="Home Accessories" data-price="32" data-img="product-photos/23-krama-cushion-set.jpg">
+        <div class="product-img">
+          <img src="product-photos/23-krama-cushion-set.jpg" alt="Krama Cushion Set" loading="lazy">
+          <span class="product-badge badge-new">New</span>
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Home Accessories</span>
+          <h3 class="product-name">Krama Cushion Set</h3>
+          <p class="product-desc">Two cotton cushion covers in classic Cambodian checks.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$32</span>
+              <span class="product-price-khr">៛131,200</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="24" data-name="Ceramic Incense Holder" data-category="Home Accessories" data-price="16" data-img="product-photos/24-ceramic-incense-holder.jpg">
+        <div class="product-img">
+          <img src="product-photos/24-ceramic-incense-holder.jpg" alt="Ceramic Incense Holder" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Home Accessories</span>
+          <h3 class="product-name">Ceramic Incense Holder</h3>
+          <p class="product-desc">Small Kampong Chhnang ceramic piece for daily rituals.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$16</span>
+              <span class="product-price-khr">៛65,600</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="25" data-name="Rattan Storage Cabinet" data-category="Furniture" data-price="275" data-img="product-photos/25-rattan-storage-cabinet.jpg">
+        <div class="product-img">
+          <img src="product-photos/25-rattan-storage-cabinet.jpg" alt="Rattan Storage Cabinet" loading="lazy">
+          <span class="product-badge badge-new">New</span>
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Furniture</span>
+          <h3 class="product-name">Rattan Storage Cabinet</h3>
+          <p class="product-desc">Woven rattan doors with solid wood frame and brass pulls.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$275</span>
+              <span class="product-price-khr">៛1,127,500</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="26" data-name="Low Teak Dining Table" data-category="Furniture" data-price="320" data-img="product-photos/26-low-teak-dining-table.jpg">
+        <div class="product-img">
+          <img src="product-photos/26-low-teak-dining-table.jpg" alt="Low Teak Dining Table" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Furniture</span>
+          <h3 class="product-name">Low Teak Dining Table</h3>
+          <p class="product-desc">Family-style table made from reclaimed Cambodian teak.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$320</span>
+              <span class="product-price-khr">៛1,312,000</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="27" data-name="Krama Lounge Ottoman" data-category="Furniture" data-price="98" data-img="product-photos/27-krama-lounge-ottoman.jpg">
+        <div class="product-img">
+          <img src="product-photos/27-krama-lounge-ottoman.jpg" alt="Krama Lounge Ottoman" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Furniture</span>
+          <h3 class="product-name">Krama Lounge Ottoman</h3>
+          <p class="product-desc">Soft footrest upholstered with krama-inspired cotton fabric.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$98</span>
+              <span class="product-price-khr">៛401,800</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="28" data-name="Teak Console Bench" data-category="Furniture" data-price="210" data-img="product-photos/28-teak-console-bench.jpg">
+        <div class="product-img">
+          <img src="product-photos/28-teak-console-bench.jpg" alt="Teak Console Bench" loading="lazy">
+          <span class="product-badge badge-bestseller">Bestseller</span>
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Furniture</span>
+          <h3 class="product-name">Teak Console Bench</h3>
+          <p class="product-desc">Slim entryway bench with a warm natural teak finish.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$210</span>
+              <span class="product-price-khr">៛861,000</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="29" data-name="Krama Reading Armchair" data-category="Furniture" data-price="175" data-img="product-photos/29-krama-reading-armchair.jpg">
+        <div class="product-img">
+          <img src="product-photos/29-krama-reading-armchair.jpg" alt="Krama Reading Armchair" loading="lazy">
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Furniture</span>
+          <h3 class="product-name">Krama Reading Armchair</h3>
+          <p class="product-desc">Comfortable armchair with woven sides and cotton cushion.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$175</span>
+              <span class="product-price-khr">៛717,500</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-id="30" data-name="Woven Daybed Frame" data-category="Furniture" data-price="390" data-img="product-photos/30-woven-daybed-frame.jpg">
+        <div class="product-img">
+          <img src="product-photos/30-woven-daybed-frame.jpg" alt="Woven Daybed Frame" loading="lazy">
+          <span class="product-badge badge-new">New</span>
+        </div>
+        <div class="product-info">
+          <span class="product-cat">Furniture</span>
+          <h3 class="product-name">Woven Daybed Frame</h3>
+          <p class="product-desc">Relaxed teak and rattan frame for verandas and reading rooms.</p>
+          <div class="product-bottom">
+            <div class="price-stack">
+              <span class="product-price">$390</span>
+              <span class="product-price-khr">៛1,599,000</span>
+            </div>
+            <button class="btn btn-sm add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p id="no-products" class="no-products" hidden>No products match your search.</p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="logo">Kingdom<span> Homecraft</span></div>
+        <p class="foot-tag">Crafted in the Kingdom of Wonder.</p>
+      </div>
+      <div class="foot-col"><h4>Visit</h4><p>#42, Street 240<br/>Daun Penh, Phnom Penh</p></div>
+      <div class="foot-col"><h4>Contact</h4><p>+855 23 123 456<br/>Telegram: @kingdomhomecraft</p></div>
+      <div class="foot-col foot-payments"><h4>We Accept</h4><img src="site-photos/We-accept-payment–for-web-footer-2.png" alt="Accepted payment methods"></div>
+    </div>
+    <div class="footer-bottom">© 2026 Kingdom Homecraft Co., Ltd. · Phnom Penh, Cambodia</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

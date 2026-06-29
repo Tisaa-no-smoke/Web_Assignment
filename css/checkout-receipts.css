@@ -1,0 +1,120 @@
+/* Cart and receipt pages */
+
+.checkout-steps span,
+.item-pill,
+.summary-payments span {
+  border-radius: 999px;
+}
+
+.checkout-steps .active span,
+.checkout-icon {
+  background-color: var(--lotus-red);
+  border-color: var(--lotus-red);
+}
+
+.ship-bar {
+  background-color: var(--lotus-soft);
+  border: 1px solid rgba(126, 47, 40, 0.18);
+  border-radius: var(--radius);
+}
+
+.ship-fill {
+  background-color: var(--lotus-red);
+}
+
+.ship-bar--done {
+  background-color: var(--lotus-red);
+}
+
+.cart-item {
+  border-color: var(--line);
+  border-radius: var(--radius);
+}
+
+.cart-item img,
+.receipt-item img {
+  border-radius: 6px;
+}
+
+.qty-btn {
+  border-color: var(--line);
+  border-radius: 50%;
+  background-color: var(--lotus-soft);
+  color: var(--lotus-red);
+  font-weight: 800;
+}
+
+.qty-btn:hover,
+.qty-btn:focus {
+  background-color: var(--hover-orange);
+  color: white;
+}
+
+.remove-btn {
+  color: var(--brand-dark);
+  font-weight: 800;
+}
+
+.cart-summary {
+  top: 96px;
+}
+
+.summary-total {
+  color: var(--ink);
+}
+
+.summary-link {
+  color: var(--lotus-red);
+}
+
+.receipt-card {
+  overflow: hidden;
+}
+
+.receipt-total {
+  color: var(--lotus-red);
+}
+
+.receipt-details {
+  background-color: #fffaf2;
+  margin: 0 -24px;
+  padding: 16px 24px;
+}
+
+.empty-cart {
+  max-width: 620px;
+  margin: 0 auto;
+  background-color: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.city-search-row,
+.city-options,
+.payment-card,
+.confirmation-card,
+.product-detail-facts div,
+.product-detail-note {
+  border-color: var(--line);
+  border-radius: var(--radius);
+}
+
+.city-select.open .city-search-row,
+.city-select.has-value .city-search-row,
+.city-search-row:focus-within {
+  border-color: var(--lotus-red);
+}
+
+.city-option:hover,
+.city-option:focus {
+  background-color: var(--hover-orange);
+  color: white;
+}
+
+.city-option.selected,
+.payment-option input:checked + .payment-card {
+  background-color: var(--lotus-soft);
+  border-color: var(--lotus-red);
+}
+

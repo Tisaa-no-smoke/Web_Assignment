@@ -1,0 +1,74 @@
+/* Modals, reveal animation, footer */
+
+.modal-overlay {
+  background-color: rgba(24, 22, 20, 0.62);
+  backdrop-filter: blur(6px);
+}
+
+.modal {
+  background-color: var(--surface-strong);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: var(--radius);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+}
+
+.product-detail-modal {
+  border-radius: var(--radius);
+}
+
+.product-detail-media {
+  background-color: var(--lotus-soft);
+}
+
+.product-detail-close,
+.qr-modal-close {
+  border-color: var(--line);
+}
+
+.modal-mark,
+.confirmation-next span {
+  background-color: var(--lotus-red);
+}
+
+.confirmation-next div {
+  background-color: var(--lotus-soft);
+  border-radius: var(--radius);
+}
+
+.toast {
+  z-index: 3000;
+  background-color: var(--ink);
+  border-radius: 6px;
+  box-shadow: var(--shadow-md);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer {
+  background: linear-gradient(135deg, var(--ink) 0%, #3b2b22 55%, var(--brand-dark) 100%);
+}
+
+.footer .logo,
+.footer .logo span,
+.footer h4 {
+  color: white;
+}
+
+.footer p,
+.footer-bottom {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.foot-payments img {
+  border-radius: var(--radius);
+}
+
