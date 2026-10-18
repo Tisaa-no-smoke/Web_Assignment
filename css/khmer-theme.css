@@ -1,0 +1,239 @@
+/* ===== Khmer Theme: krama checks, kbach ornaments, lotus, Angkor ===== */
+
+:root {
+  --krama-red: #7e2f28;
+  --krama-cream: #fff4e4;
+  --angkor-gold: #b7892f;
+
+  /* Krama gingham: red stripes crossing both ways on cream */
+  --krama-pattern:
+    repeating-linear-gradient(90deg, rgba(126, 47, 40, 0.85) 0 6px, transparent 6px 12px),
+    repeating-linear-gradient(0deg, rgba(126, 47, 40, 0.5) 0 3px, transparent 3px 6px),
+    var(--krama-cream);
+
+  /* Kbach divider: gold lines and diamonds around a red lotus */
+  --kbach-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 20'%3E%3Cg fill='none' stroke='%23b7892f' stroke-width='1.2'%3E%3Cpath d='M0 10h56M104 10h56'/%3E%3Cpath d='M60 10l4-4 4 4-4 4zM92 10l4-4 4 4-4 4z'/%3E%3C/g%3E%3Cg fill='%23a7472d'%3E%3Cpath d='M80 1c3.5 4.5 3.5 10 0 15-3.5-5-3.5-10.5 0-15z'/%3E%3Cpath fill-opacity='.7' d='M80 16c-2-5-6-7.5-10-7.5 1 4.5 4.5 7.5 10 7.5zM80 16c2-5 6-7.5 10-7.5-1 4.5-4.5 7.5-10 7.5z'/%3E%3C/g%3E%3C/svg%3E");
+
+  /* Lotus flower used on cards */
+  --lotus-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 28'%3E%3Cg fill='%23a7472d'%3E%3Cpath d='M20 0c4.5 5 4.5 14 0 22-4.5-8-4.5-17 0-22z'/%3E%3Cpath fill-opacity='.75' d='M20 22c-2-7-7-11-13-12 1 7 6 12 13 12zM20 22c2-7 7-11 13-12-1 7-6 12-13 12z'/%3E%3Cpath fill-opacity='.45' d='M20 22c-5-4-11-5-17-3 4 4 10 5 17 3zM20 22c5-4 11-5 17-3-4 4-10 5-17 3z'/%3E%3C/g%3E%3Cpath d='M6 26h28' stroke='%23b7892f' stroke-width='1.5'/%3E%3C/svg%3E");
+
+  /* Angkor Wat silhouette: five towers on a stepped terrace */
+  --angkor-silhouette: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 120' fill='%23ffffff' fill-opacity='.07'%3E%3Cpath d='M0 120v-8h300v8zM20 112v-8h260v8zM40 104v-10h220v10zM70 94v-14h160v14z'/%3E%3Cpath d='M134 94c0-30 6-52 16-74 10 22 16 44 16 74zM148 20l2-16 2 16z'/%3E%3Cpath d='M96 94c0-22 5-38 12-52 7 14 12 30 12 52zM180 94c0-22 5-38 12-52 7 14 12 30 12 52zM107 42l1-10 1 10zM191 42l1-10 1 10z'/%3E%3Cpath d='M56 94c0-16 4-28 10-38 6 10 10 22 10 38zM224 94c0-16 4-28 10-38 6 10 10 22 10 38z'/%3E%3C/svg%3E");
+
+  /* Small kbach diamond tile for dark panels */
+  --kbach-tile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.07' stroke-width='1'%3E%3Cpath d='M20 4l16 16-16 16L4 20z'/%3E%3Cpath d='M20 12c3 3 3 6 0 8-3-2-3-5 0-8z'/%3E%3Cpath d='M20 28c-3-3-3-6 0-8 3 2 3 5 0 8z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ===== Khmer typography ===== */
+
+body {
+  font-family: "Inter", "Noto Serif Khmer", Arial, sans-serif;
+}
+
+.km,
+[lang="km"] {
+  font-family: "Noto Serif Khmer", serif;
+}
+
+/* Khmer half of the eyebrow labels uses the decorative Moul font */
+.eyebrow .km {
+  font-family: "Moul", "Noto Serif Khmer", serif;
+  font-weight: 400;
+  font-size: 1.05em;
+  letter-spacing: 0;
+}
+
+/* ===== Krama checked strips ===== */
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--krama-pattern);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--krama-pattern);
+}
+
+/* ===== Kbach ornament under section titles ===== */
+
+.section-header h2::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 20px;
+  margin: 14px auto 0;
+  background: var(--kbach-divider) no-repeat center / contain;
+}
+
+/* Khmer numerals above section titles (០១, ០២, ០៣) */
+.section-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 10px;
+  border: 1px solid var(--angkor-gold);
+  border-radius: 50%;
+  outline: 1px solid rgba(183, 137, 47, 0.35);
+  outline-offset: 3px;
+  color: var(--angkor-gold);
+  font-family: "Moul", serif;
+  font-size: 14px;
+}
+
+/* ===== Hero: gold frame and "Made in Cambodia" seal ===== */
+
+.hero-img::before {
+  border: 1px solid var(--angkor-gold);
+  box-shadow: inset 0 0 0 4px rgba(255, 253, 248, 0.6), inset 0 0 0 5px rgba(183, 137, 47, 0.45);
+}
+
+.hero-seal {
+  position: absolute;
+  top: -22px;
+  left: -22px;
+  z-index: 2;
+  width: 104px;
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--krama-red);
+  color: #fdf1dc;
+  font-family: "Moul", serif;
+  font-size: 13px;
+  line-height: 1.7;
+  box-shadow: 0 0 0 4px var(--surface-strong), 0 0 0 5px var(--angkor-gold), var(--shadow-md);
+  transform: rotate(-10deg);
+}
+
+.hero-seal::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed rgba(253, 241, 220, 0.55);
+  border-radius: 50%;
+}
+
+/* ===== Marquee: gold borders like temple lintels ===== */
+
+.marquee-track {
+  border-top: 2px solid var(--angkor-gold);
+  border-bottom: 2px solid var(--angkor-gold);
+}
+
+/* ===== Lotus on value and testimonial cards ===== */
+
+.value-card {
+  position: relative;
+  padding-top: 56px;
+}
+
+.value-card::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  width: 40px;
+  height: 28px;
+  background: var(--lotus-icon) no-repeat center / contain;
+}
+
+.testimonial {
+  position: relative;
+}
+
+.testimonial::after {
+  content: "";
+  position: absolute;
+  bottom: 22px;
+  right: 20px;
+  width: 30px;
+  height: 21px;
+  background: var(--lotus-icon) no-repeat center / contain;
+  opacity: 0.35;
+}
+
+.testimonial-avatar {
+  background-color: var(--krama-red);
+  color: #fdf1dc;
+  box-shadow: 0 0 0 2px var(--surface-strong), 0 0 0 3px var(--angkor-gold);
+}
+
+/* ===== Dark panels: kbach tile pattern and Angkor silhouette ===== */
+
+.newsletter {
+  position: relative;
+  background:
+    var(--kbach-tile) 0 0 / 40px 40px,
+    linear-gradient(135deg, var(--ink) 0%, var(--lotus-deep) 52%, var(--lotus-red) 100%);
+}
+
+.footer {
+  background:
+    var(--angkor-silhouette) no-repeat right 3% bottom 0 / 300px auto,
+    linear-gradient(135deg, var(--ink) 0%, #3b2b22 55%, var(--brand-dark) 100%);
+}
+
+.newsletter h2 {
+  color: white;
+}
+
+.footer .foot-km {
+  margin-top: 4px;
+  color: var(--angkor-gold);
+  font-family: "Moul", serif;
+  font-size: 14px;
+}
+
+/* Contact page info panel gets the kbach tile too */
+.contact-info {
+  background-image: var(--kbach-tile);
+  background-size: 40px 40px;
+}
+
+/* ===== Product cards: gold hairline on hover, krama badge ===== */
+
+.product-card:hover,
+.product-card:focus-within {
+  border-color: var(--angkor-gold);
+}
+
+.product-badge.badge-new {
+  background: var(--krama-pattern);
+  color: var(--krama-red);
+  box-shadow: inset 0 0 0 1px var(--krama-red);
+  text-shadow: 0 0 3px var(--krama-cream), 0 0 3px var(--krama-cream);
+}
+
+/* ===== Phone adjustments ===== */
+
+@media (max-width: 600px) {
+  .hero-seal {
+    top: -14px;
+    left: auto;
+    right: -6px;
+    width: 82px;
+    height: 82px;
+    font-size: 11px;
+  }
+
+  .footer {
+    background-size: 200px auto, auto;
+    background-position: right 16px bottom 0, 0 0;
+  }
+}
