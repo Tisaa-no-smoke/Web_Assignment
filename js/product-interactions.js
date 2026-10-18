@@ -11,6 +11,17 @@ function getProductFromCard(card) {
   };
 }
 
+/* Prices are written once in data-price; USD and riel text are filled in from it */
+function renderProductPrices() {
+  document.querySelectorAll(".product-card").forEach(function (card) {
+    const usd = card.querySelector(".product-price");
+    const khr = card.querySelector(".product-price-khr");
+
+    if (usd) usd.textContent = fmtUSD(card.dataset.price);
+    if (khr) khr.textContent = fmtKHR(card.dataset.price);
+  });
+}
+
 function addProductCardToCart(card) {
   const product = getProductFromCard(card);
   const cart = getCart();
@@ -157,10 +168,23 @@ function showProductDetailModal(card) {
     </div>`;
 
   document.body.appendChild(modal);
+  modal.querySelector(".product-detail-close").focus();
+
+  function closeModal() {
+    modal.remove();
+    document.removeEventListener("keydown", closeOnEscape);
+    card.focus();
+  }
+
+  function closeOnEscape(event) {
+    if (event.key === "Escape") closeModal();
+  }
+
+  document.addEventListener("keydown", closeOnEscape);
 
   modal.addEventListener("click", function (event) {
     if (event.target === modal || event.target.closest(".product-detail-close")) {
-      modal.remove();
+      closeModal();
       return;
     }
 
@@ -196,6 +220,7 @@ function filterProducts() {
   const activeButton = document.querySelector(".filter-btn.active");
   const searchInput = document.getElementById("search");
   const noProducts = document.getElementById("no-products");
+  const resultsCount = document.getElementById("results-count");
 
   const activeCategory = activeButton ? activeButton.dataset.category : "All";
   const searchText = searchInput ? searchInput.value.toLowerCase() : "";
@@ -203,10 +228,10 @@ function filterProducts() {
   let visibleCount = 0;
 
   cards.forEach(function (card) {
-    const productName = card.dataset.name.toLowerCase();
     const productCategory = card.dataset.category;
+    const searchableText = (card.dataset.name + " " + productCategory + " " + getProductDetailText(card)).toLowerCase();
     const categoryMatches = activeCategory === "All" || productCategory === activeCategory;
-    const searchMatches = productName.includes(searchText);
+    const searchMatches = searchableText.includes(searchText.trim());
     const shouldShow = categoryMatches && searchMatches;
 
     card.hidden = !shouldShow;
@@ -216,6 +241,28 @@ function filterProducts() {
   if (noProducts) {
     noProducts.hidden = visibleCount > 0;
   }
+
+  if (resultsCount) {
+    resultsCount.textContent = "Showing " + visibleCount + " of " + cards.length + " products";
+  }
+}
+
+function sortProducts(sortValue) {
+  const grid = document.getElementById("products-grid");
+  if (!grid) return;
+
+  const cards = Array.from(grid.querySelectorAll(".product-card"));
+
+  cards.sort(function (a, b) {
+    if (sortValue === "price-asc") return a.dataset.price - b.dataset.price;
+    if (sortValue === "price-desc") return b.dataset.price - a.dataset.price;
+    if (sortValue === "name") return a.dataset.name.localeCompare(b.dataset.name);
+    return a.dataset.order - b.dataset.order;
+  });
+
+  cards.forEach(function (card) {
+    grid.appendChild(card);
+  });
 }
 
 function initProductFilters() {
@@ -226,7 +273,9 @@ function initProductFilters() {
   const urlCategory = new URLSearchParams(location.search).get("cat");
 
   if (urlCategory) {
-    const selectedButton = filters.querySelector('[data-category="' + urlCategory + '"]');
+    const selectedButton = Array.from(filters.querySelectorAll(".filter-btn")).find(function (button) {
+      return button.dataset.category === urlCategory;
+    });
     if (selectedButton) {
       filters.querySelectorAll(".filter-btn").forEach(function (button) {
         button.classList.toggle("active", button === selectedButton);
@@ -246,5 +295,17 @@ function initProductFilters() {
   });
 
   searchInput.addEventListener("input", filterProducts);
+
+  const sortSelect = document.getElementById("sort");
+  if (sortSelect) {
+    document.querySelectorAll("#products-grid .product-card").forEach(function (card, index) {
+      card.dataset.order = index;
+    });
+
+    sortSelect.addEventListener("change", function () {
+      sortProducts(sortSelect.value);
+    });
+  }
+
   filterProducts();
 }

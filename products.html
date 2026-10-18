@@ -54,8 +54,17 @@
         <button class="filter-btn" data-category="Plants">Plants</button>
         <button class="filter-btn" data-category="Home Accessories">Home Accessories</button>
       </div>
-      <input id="search" class="search-input" type="search" placeholder="Search products..." />
+      <div class="toolbar-tools">
+        <input id="search" class="search-input" type="search" placeholder="Search products..." aria-label="Search products" />
+        <select id="sort" class="sort-select" aria-label="Sort products">
+          <option value="featured">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </div>
     </div>
+    <p id="results-count" class="results-count" aria-live="polite"></p>
 
     <div id="products-grid" class="product-grid">
       <article class="product-card reveal" data-id="1" data-name="Wooden Lounge Chair" data-category="Furniture" data-price="189" data-img="product-photos/01-rattan-lounge-chair.jpg">
@@ -621,7 +630,7 @@
         <p class="foot-tag">Crafted in the Kingdom of Wonder.</p>
       </div>
       <div class="foot-col"><h4>Visit</h4><p>#42, Street 240<br/>Daun Penh, Phnom Penh</p></div>
-      <div class="foot-col"><h4>Contact</h4><p>+855 23 123 456<br/>Telegram: @kingdomhomecraft</p></div>
+      <div class="foot-col"><h4>Contact</h4><p>+855 23 123 456<br/>Telegram: @kingdomhomecraft<br/>hello@kingdomhomecraft.kh</p></div>
       <div class="foot-col foot-payments"><h4>We Accept</h4><img src="site-photos/We-accept-payment–for-web-footer-2.png" alt="Accepted payment methods"></div>
     </div>
     <div class="footer-bottom">© 2026 Kingdom Homecraft Co., Ltd. · Phnom Penh, Cambodia</div>

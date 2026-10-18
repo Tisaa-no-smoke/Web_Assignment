@@ -3,8 +3,21 @@
 /* ===== Kingdom Homecraft — Small Shared JS ===== */
 /* Most product content is now written directly in HTML. */
 
-const CART_KEY = "angkor_maison_cart";
-const RECEIPT_KEY = "angkor_maison_receipts";
+const CART_KEY = "kingdom_homecraft_cart";
+const RECEIPT_KEY = "kingdom_homecraft_receipts";
+
+/* Move carts and receipts saved under the old project name to the new keys */
+[["angkor_maison_cart", CART_KEY], ["angkor_maison_receipts", RECEIPT_KEY]].forEach(function (keys) {
+  try {
+    const oldData = localStorage.getItem(keys[0]);
+    if (oldData !== null && localStorage.getItem(keys[1]) === null) {
+      localStorage.setItem(keys[1], oldData);
+    }
+    localStorage.removeItem(keys[0]);
+  } catch (error) {
+    /* Storage is unavailable, nothing to move */
+  }
+});
 const FREE_SHIPPING_AT = 200;
 const KHR_RATE = 4100;
 const CAMBODIA_CITY_PROVINCES = [

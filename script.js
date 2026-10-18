@@ -6,6 +6,8 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   updateCartBadge();
+  renderProductPrices();
+  initHeaderShadow();
   initAddToCartButtons();
   initProductDetails();
   initProductFilters();

@@ -83,6 +83,27 @@ function restartAutoSlides() {
 }
 
 function initSlideshow() {
+  const dots = document.querySelectorAll(".dots .dot");
+
+  dots.forEach(function (dot, index) {
+    dot.addEventListener("click", function () {
+      currentSlide(index + 1);
+    });
+  });
+
   showSlides(slideIndex);
   restartAutoSlides();
+}
+
+/* Adds a shadow under the sticky header once the page is scrolled */
+function initHeaderShadow() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+
+  function updateHeader() {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  }
+
+  window.addEventListener("scroll", updateHeader, { passive: true });
+  updateHeader();
 }
