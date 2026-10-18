@@ -67,6 +67,30 @@
   color: var(--lotus-red);
 }
 
+.checkout-confirmation {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 34px);
+  background-color: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+.checkout-confirmation .confirmation-card {
+  margin: 22px 0 18px;
+}
+
+.confirmation-receipt {
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.confirmation-receipt .receipt-items {
+  max-height: 330px;
+  overflow-y: auto;
+}
+
 .receipt-card {
   overflow: hidden;
 }
@@ -117,4 +141,3 @@
   background-color: var(--lotus-soft);
   border-color: var(--lotus-red);
 }
-
