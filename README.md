@@ -4,7 +4,7 @@ An online store for handmade Cambodian furniture and home decor. Prices are show
 
 **Live site:** https://webdevassaignment.vercel.app
 
-![Kingdom Homecraft on desktop and mobile](docs/screenshots/cover.jpg)
+![Kingdom Homecraft on desktop and tablet](docs/screenshots/cover.jpg)
 
 ## About
 
